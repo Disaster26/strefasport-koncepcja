@@ -8,7 +8,7 @@
 <meta name="description" content="Codzienne spływy kajakowe Rospudą, Czarną Hańczą i Marychą z bazy w Augustowie, wypożyczalnia kajaków, domki w Płaskiej. Zimą licencjonowana szkoła narciarska SITN-PZN na Szelmencie.">
 <meta name="theme-color" content="#264796">
 <link rel="preload" href="fonts/archivo-rdzen.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/webp" href="img/hero-1024.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2048.webp 2048w" imagesizes="(max-width: 900px) 260vw, (max-aspect-ratio: 4/3) 133vh, 100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="img/hero-1024.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2048.webp 2048w" imagesizes="(max-width: 980px) 100vw, (max-aspect-ratio: 4/3) 133vh, 100vw" fetchpriority="high">
 <style>
 @font-face{font-family:Archivo;src:url(fonts/archivo-rdzen.woff2) format("woff2");font-weight:400 800;font-stretch:75% 100%;font-display:swap;unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026,U+20AC}
 @font-face{font-family:Archivo;src:url(fonts/archivo-pl.woff2) format("woff2");font-weight:400 800;font-stretch:75% 100%;font-display:swap;unicode-range:U+0104-0107,U+010C-010D,U+0118-011B,U+0141-0144,U+0158-0161,U+016E-016F,U+0179-017E}
@@ -63,8 +63,15 @@ p{margin:0}
 .hero .ph small{font-size:14px;opacity:.85;font-weight:500}
 .fala{position:absolute;left:0;right:0;bottom:-1px;height:clamp(46px,6vw,92px);width:100%;z-index:1;pointer-events:none}
 @media(min-width:2080px){.hero{margin-top:20px;border-radius:6px}}
-@media(max-width:980px){.hero{min-height:calc(100svh - 60px)}.hero::before{background:linear-gradient(0deg,rgba(10,25,66,.88) 0%,rgba(10,25,66,.62) 48%,rgba(10,25,66,.1) 78%)}.hero .wrap{padding-bottom:64px}}
-@media(max-width:420px){.hero h1{font-size:clamp(34px,10vw,42px)}.hero p{margin-top:16px;font-size:16.5px}.hero .cta{margin-top:24px}}
+@media(max-width:980px){
+ .hero{flex-direction:column;align-items:stretch;min-height:calc(100svh - 60px);max-height:none;background:var(--gd)}
+ .hero::before{display:none}
+ .hero picture{position:relative;inset:auto;display:block;height:auto;aspect-ratio:16/9;flex:none;z-index:0}
+ .hero picture img{object-position:50% 62%}
+ .hero .wrap{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:22px;padding-bottom:58px}
+}
+@media(max-width:980px) and (min-height:760px){.hero picture{aspect-ratio:4/3}}
+@media(max-width:420px){.hero h1{font-size:clamp(30px,8.6vw,38px)}.hero p{margin-top:12px;font-size:16px;line-height:1.5}.hero .cta{margin-top:24px;gap:12px 20px;flex-wrap:nowrap}.hero .btn{padding:0 18px;min-height:50px}.hero .ph b{font-size:20px}}
 
 /* sekcje */
 section{scroll-margin-top:70px}
@@ -234,13 +241,13 @@ form .nota{grid-column:1/-1;font-size:13.5px;color:var(--m)}
 <main>
 <section class="hero">
  <picture>
-  <img src="img/hero-1024.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2048.webp 2048w" sizes="(max-width: 900px) 260vw, (max-aspect-ratio: 4/3) 133vh, 100vw" width="2048" height="1536" alt="Grupa w czerwonych kajakach na spływie z bazy Strefa w Augustowie" fetchpriority="high">
+  <img src="img/hero-1024.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2048.webp 2048w" sizes="(max-width: 980px) 100vw, (max-aspect-ratio: 4/3) 133vh, 100vw" width="2048" height="1536" alt="Grupa w czerwonych kajakach na spływie z bazy Strefa w Augustowie" fetchpriority="high">
  </picture>
  <div class="wrap">
   <h1>Spływy kajakowe w Augustowie, a zimą narty na Szelmencie</h1>
-  <p>Latem codziennie zabieramy na Rospudę, Czarną Hańczę i Marychę. Zimą uczymy jazdy na nartach w licencjonowanej szkole SITN-PZN.</p>
+  <p>Latem codzienne spływy Rospudą, Czarną Hańczą i Marychą. Zimą licencjonowana szkoła narciarska SITN-PZN.</p>
   <div class="cta">
-   <a class="btn" href="#splywy">Wybierz trasę spływu</a>
+   <a class="btn" href="#splywy">Wybierz trasę</a>
    <a class="ph" href="tel:+48604476971"><small>Rezerwacje</small><b>604 476 971</b></a>
   </div>
  </div>
